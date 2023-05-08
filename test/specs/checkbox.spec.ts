@@ -1,6 +1,10 @@
 import CheckboxPage from '../pageobjects/checkbox.page.js'
 
 describe('checkboxes', () => {
+    beforeAll(async () => {
+        await CheckboxPage.open()
+        throw new Error('My error');
+    });
     it('checkbox 2 should be enabled', async () => {
         await CheckboxPage.open()
         await expect(CheckboxPage.firstCheckbox).not.toBeSelected()

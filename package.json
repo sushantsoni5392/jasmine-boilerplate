@@ -43,5 +43,8 @@
     "typescript": "^5.0.4",
     "wdio-chromedriver-service": "^8.1.1",
     "webdriverio": "^8.8.8"
+  },
+  "dependencies": {
+    "@wdio/allure-reporter": "^8.10.0"
   }
 }

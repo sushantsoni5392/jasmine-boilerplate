@@ -9,5 +9,14 @@ export const config: WebdriverIO.Config = {
                 headless: true
             }
         }]
-    }
+    },
+    reporters: [
+        'spec',
+        [
+            'allure',
+            {
+                outputDir: './test/results/allure-results',
+            },
+        ],
+    ],
 }

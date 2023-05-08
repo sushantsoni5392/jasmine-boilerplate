@@ -112,6 +112,18 @@ export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
     jasmineOpts: {
         // Jasmine default timeout
         defaultTimeoutInterval: 60000,
+        /**
+         * stopOnSpecFailure
+         * Stops test suite (describe) execution on first spec (it) failure (other suites continue running)
+         * cf. https://github.com/webdriverio/webdriverio/blob/main/packages/wdio-jasmine-framework/README.md
+         * */
+        stopOnSpecFailure: true,
+        /**
+         * stopSpecOnExpectationFailure
+         * Stops a spec (it) execution on a first expectation failure (other specs continue running)
+         * cf. https://github.com/webdriverio/webdriverio/blob/main/packages/wdio-jasmine-framework/README.md
+         * */
+        stopSpecOnExpectationFailure: true,
         //
         // The Jasmine framework allows interception of each assertion in order to log the state of the application
         // or website depending on the result. For example, it is pretty handy to take a screenshot every time
